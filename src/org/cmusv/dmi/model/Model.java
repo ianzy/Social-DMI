@@ -8,7 +8,10 @@ package org.cmusv.dmi.model;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 
+import org.cmusv.dmi.twitter.SearchTweets;
 import org.mybeans.factory.BeanTable;
+
+import twitter4j.TwitterException;
 
 public class Model {
 	
@@ -16,6 +19,8 @@ public class Model {
 	private KeywordDAO keywordDAO;
 	
 	private TweetsDAO tweetsDAO;
+	
+	private SearchTweets st;
 
 	public Model(ServletConfig config) throws ServletException {
 
@@ -24,6 +29,14 @@ public class Model {
 		BeanTable.useJDBC(jdbcDriver, jdbcURL, "root", "");
 		keywordDAO = new KeywordDAO();
 		tweetsDAO = new TweetsDAO();
+		
+		st = new SearchTweets(tweetsDAO, keywordDAO);
+		try {
+			st.getTweetsByKeyword();
+		} catch (TwitterException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public Model(String jdbcDriver, String jdbcURL) {

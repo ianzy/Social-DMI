@@ -43,6 +43,15 @@ public class SearchTweets extends HttpServlet implements StatusListener{
 		keywordDAO = keywordDAO1;
 	}
 	
+//	public SearchTweets() {
+//		ServletConfig config = this.getServletConfig();
+//		String jdbcDriver = config.getInitParameter("jdbcDriverName");
+//		String jdbcURL = config.getInitParameter("jdbcURL");
+//		BeanTable.useJDBC(jdbcDriver, jdbcURL, "root", "ewq321#@!");
+//		tweetsDAO = new TweetsDAO();
+//		keywordDAO = new KeywordDAO();
+//	}
+	
 	public void getTweetsByKeyword() throws TwitterException{
 		
 		int count = 0;
@@ -135,7 +144,10 @@ public class SearchTweets extends HttpServlet implements StatusListener{
 	}
 	
 //	public static void main(String args[]) throws TwitterException, ServletException{
+//		
+//		
 //		SearchTweets st = new SearchTweets();
+//	
 //		st.getTweetsByKeyword();
 //	}
 

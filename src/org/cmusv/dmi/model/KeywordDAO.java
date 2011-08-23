@@ -28,7 +28,7 @@ public class KeywordDAO extends GenericDAO<Keyword> {
 	}
 	
 	public void loadData(){
-		String[] track = { "Thai flood", "DISASTER WARNING", "VICTIMS",
+		String[] track = { "google", "Thai flood", "DISASTER WARNING", "VICTIMS",
 				"DONATE", "RESCUE", "firemen", "Cholera", "floods",
 				"emergency", "survivors" };
 		Keyword keyword;

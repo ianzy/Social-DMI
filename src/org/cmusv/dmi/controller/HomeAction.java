@@ -12,10 +12,7 @@ import org.cmusv.dmi.databeans.Tweets;
 import org.cmusv.dmi.model.KeywordDAO;
 import org.cmusv.dmi.model.Model;
 import org.cmusv.dmi.model.TweetsDAO;
-import org.cmusv.dmi.twitter.SearchTweets;
 import org.mybeans.dao.DAOException;
-
-import twitter4j.TwitterException;
 
 /**
  * @Author Vinod Ekambaram
