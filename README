@@ -1,0 +1,14 @@
+Download eclipse and tomcat
+http://www.eclipse.org/downloads/
+
+Set up environment
+http://www.coreservlets.com/Apache-Tomcat-Tutorial/tomcat-7-with-eclipse.html
+
+Set up database
+  Model.java
+    // set up mysql username and password
+    BeanTable.useJDBC(jdbcDriver, jdbcURL, "root", "");
+  
+  in terminal
+  $ mysql -u root -p
+  create database cmusvdmi;
